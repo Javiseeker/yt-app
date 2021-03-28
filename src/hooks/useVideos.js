@@ -1,11 +1,12 @@
 import {useState, useEffect} from 'react';
 import youtube from '../apis/youtube';
 
-const useVideos = ({defaultSearchTerm}) =>{
+const useVideos = (defaultSearchTerm) =>{
   const [videos, setVideos] = useState([]);
 
   useEffect(
     ()=>{
+      console.log(`the default term was: ${defaultSearchTerm}`)
       search(defaultSearchTerm);
     },
     [defaultSearchTerm]
