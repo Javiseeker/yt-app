@@ -6,7 +6,6 @@ const useVideos = (defaultSearchTerm) =>{
 
   useEffect(
     ()=>{
-      console.log(`the default term was: ${defaultSearchTerm}`)
       search(defaultSearchTerm);
     },
     [defaultSearchTerm]
